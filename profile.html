@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                margin: 10px;
+                padding: 0px;
+                color: white;
+                font-size: small;
+                font-weight: 100;
+                background-color: black;
+            }
+            .container {
+                display: flex;
+                flex-direction: row;
+                height: 93vh;
+            }
+            .dp {
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+            }
+            .profile-selection {
+                height: 30px;
+                position: relative;
+                bottom: 25px;
+                left: 15px;
+                cursor: pointer; /* Makes it look clickable */
+            }
+            .profile {
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                background-color: black;
+                align-items: center;
+                height: 90vh;
+                border-width: 2px;
+                border-style: solid;
+                border-color: rgb(121, 118, 118);
+                transition: box-shadow 2s;
+                outline: none;
+                border-radius: 10px;
+                padding-top: 10px;
+            }
+            .profile:hover {
+                box-shadow: 2px 2px 2px rgb(86, 86, 86);
+            }
+            #name {
+                margin-top: 2px;
+                margin-bottom: 0px;
+            }
+            #mail {
+                margin-top: 0px;
+            }
+            .sites img {
+                width: 28px;
+            }
+            .sites button {
+                background-color: rgb(17, 17, 17);
+                padding: 5px;
+                cursor: pointer;
+                margin-left: 8px;
+                border: none;
+            }
+            .public {
+                display: flex;
+                flex-direction: column;
+                width: 100px;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0px 0px 15px 0px;
+            }
+            .record-button {
+                width: 55px;
+                height: 25px;
+                outline: none;
+                border: none;
+                border-radius: 15%;
+                background-color: rgb(63, 43, 238);
+            }
+            .record-icon {
+                width: 10px;
+                margin: 0px;
+                padding: 0px;
+                left: 0px;
+            }
+            .profile-right {
+                display: flex;
+                flex-direction: column;
+                width: 80vw;
+                padding-left: 10px;
+            }
+            .profile-right-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 40vh;
+            }
+            .profile-right-left,
+            .profile-right-right,
+            .profile-right-bottom {
+                border: 2px solid rgb(121, 118, 118);
+                border-radius: 6px;
+            }
+            .profile-right-left {
+                width: 55vw;
+            }
+            .profile-right-right {
+                flex: 1;
+                margin-left: 10px;
+                padding: 35px 0px 0px 12px;
+            }
+            .profile-right-right input {
+                outline: none;
+                border-width: 0px;
+                background-color: rgb(86, 86, 86);
+                color: white;
+                padding: 5px;
+            }
+            .profile-right-right button {
+                margin: 20px 0px 10px 110px;
+                background-color: gold;
+                border: none;
+                border-radius: 3px;
+                padding: 5px;
+                cursor: pointer;
+            }
+            .profile-right-right button:hover {
+                opacity: 0.6;
+            }
+            .profile-right-right label {
+                font-family: monospace;
+                font-size: 13px;
+                font-weight: bolder;
+                color: black;
+            }
+            .profile-right-bottom {
+                margin-top: 15px;
+                height: 70vh;
+            }
+        </style>
+        <script>
+            function previewImage(event) {
+                const file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        document.querySelector('.dp').src = e.target.result; 
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            // Function to trigger the file input when the camera icon is clicked
+            function triggerFileInput() {
+                document.getElementById('fileInput').click();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="profile">
+                <img src="images/passport_pic.png" class="dp" alt="Profile Picture">
+                <img src="images/cam.png" class="profile-selection" alt="Camera Icon" onclick="triggerFileInput();">
+                <input type="file" id="fileInput" style="display:none;" onchange="previewImage(event)">
+                <p id="name">Pyla Chaitanya</p>
+                <p id="mail">@p.chaitanyapyla@gmail.com</p>
+                <div class="public">
+                    <p>Public</p>
+                    <button class="record-button">
+                        <img src="images/record.png" class="record-icon">
+                    </button>
+                </div>
+                <div class="sites">
+                    <button><img src="images/suffle.png"></button>
+                    <button><img src="images/graduated.png"></button>
+                    <button><img src="images/light.png"></button>
+                    <button><img src="images/search.png"></button>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="profile-right-top">
+                    <div class="profile-right-left">
+                        <p>
+                            A current B.Tech graduating student studying Information Technology. Currently looking
+                            for opportunities in software.
+                        </p>
+                    </div>
+                    <div class="profile-right-right">
+                        <label>Leetcode Username:</label>
+                        <input type="text">
+                        <button>Submit</button>
+                    </div>
+                </div>
+                <div class="profile-right-bottom">
+                    <h1>Topics Covered !!!!!!!!</h1>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

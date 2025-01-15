@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function validate()
+      {
+        var z=document.form.nam.value;
+        var fname=document.form.fname.value;
+        var mname=document.form.mname.value;
+        if(n==" ")
+        {
+           alert('Enter Name ');
+           document.form.name.focus();
+           return false;
+        }
+        if(fname==" ")
+        {
+           alert('Enter Name ');
+           document.form.name.focus();
+           return false;
+        }
+        if(mname==" ")
+        {
+           alert('Enter Name ');
+           document.form.name.focus();
+           return false;
+        }
+      }
+    </script>
+     <style>
+      body
+      {
+        background-color: black;
+        color:rgb(238, 75, 43);
+      }
+      input
+      {
+        outline:none;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+    <form method="post" onsubmit="validate()" name="form">
+      <pre>
+      <u><h1>BIO DATA FORM</h1></u>
+      <b>Name: </b><input type="text" name="nam"><br>
+      <b>Father Name: </b><input type="text" name="fname"><br>
+      <b>Mother Name: </b><input type="text" name="mname"><br>
+      <b>Gender:</b>
+      Male:<input type="radio" name="poll">
+      Female:<input type="radio" name="poll"><br>
+      <b>DOB: </b><input type="date" name="dob"><br>
+      <b>Hobbies</b>
+      i love reading<input type="checkbox" name="c1">
+      i love playing<input type="checkbox" name="c2"><br>
+      <b>Address:</b>
+      <textarea rows="10" cols="20" name="add"></textarea>
+      <input type="submit">
+      <input type="reset">
+    </pre>
+    </form>
+  </center>
+  </body>
+</html>

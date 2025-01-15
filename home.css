@@ -1,0 +1,128 @@
+*{
+  padding:0;
+  margin:0;
+}
+body
+{
+  display:flex;
+  flex-direction:row;
+  background-color: black;
+}
+button
+{
+  cursor:pointer;
+}
+.sidebar
+{
+  width:200px;
+  height:100vh;
+  justify-content: center;
+  text-align: center;
+  border-style:solid;
+  border-left:none;
+  border-top:none;
+  border-bottom:none;
+  border-width: 0.5px;
+  border-color:rgb(255, 255, 255);
+}
+.profile, .blog, .mentor-button {
+  background-color: transparent; 
+  color: white; 
+  padding: 9px;
+  margin: 10px;
+  width: 150px;
+  border-radius: 15px;
+  border: 2px solid white; 
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; 
+   cursor: pointer; 
+  font-size: 14px; 
+}
+
+.profile a, .blog a, .mentor-button a 
+{
+  color: white; 
+  text-decoration: none; 
+  display: block; 
+}
+
+.profile:hover, .blog:hover, .mentor-button:hover 
+{
+  background-color:rgb(238, 75, 43); 
+}
+
+.profile:active, .blog:active, .mentor-button:active 
+{
+  background-color:rgb(238, 75, 43) ;
+  color: white; 
+  border-color: #be6464; 
+}
+
+.profile a:hover, .blog a:hover, .mentor-button a:hover 
+{
+  color: white; 
+}
+
+.graduate
+{
+  height:70px;
+  width:70px;
+  margin-top:10px;
+}
+.main
+{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.header
+{
+  display:flex;
+  flex-direction:row;
+  justify-content: right;
+  height:50px;
+  width:100%px;
+  padding:5px 5px 5px 5px;
+}
+.mentor-button
+{
+  border:solid;
+  height:35px;
+  margin-top:8px;
+  margin-right:15px;
+  text-align: center;
+  border-width:1px;
+  border-radius:9px;
+  padding:10px 10px 10px 10px;
+  border-color:white;
+  border-width:1px;
+  background-color: transparent;
+  color:white;
+}
+.light-button,.profile-button
+{
+  height:50px;
+  width:50px;
+  background:transparent;
+  border:none;
+  margin-right:15px;
+}
+.light-img,.profile-img
+{
+  height:30px;
+  width:30px;
+}
+
+iframe
+{
+  border-left:none;
+  border-bottom:none;
+  border-right:none;
+  border-width: 1px;
+  color:white;
+}
+.screen
+{
+  flex:1;
+  
+}
