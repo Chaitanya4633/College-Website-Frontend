@@ -1,1 +1,4 @@
 
+build/* linguist-generated
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
